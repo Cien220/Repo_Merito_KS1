@@ -1,0 +1,11 @@
+def Char2Span(str):
+
+    if  len(str) < 2:
+
+        return ''
+
+    return  str[0:2] + str[-2:]
+
+print(Char2Span('Bahrain'))
+print(Char2Span('Bah'))
+print(Char2Span('X'))
