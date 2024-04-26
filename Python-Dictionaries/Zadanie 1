@@ -1,0 +1,13 @@
+import operator
+
+Dic = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+
+print('Podglą : ',Dic)
+
+SortDic = sorted(Dic.items(), key=operator.itemgetter(1))
+
+print('Posortowane rosnąco wedłub wielkości : ',SortDic)
+
+SortDic = dict( sorted(Dic.items(), key=operator.itemgetter(1), reverse=True))
+
+print('Posortowane malejąco wedłub wielkości : ',SortDic)
