@@ -1,0 +1,25 @@
+temp = input("Wpisz temperatur do przekonwertowania i litere skale : ")
+
+Stopn = int(temp[:-1])
+
+CatchSkala = temp[-1]
+
+if CatchSkala.upper() == "C":
+
+    result = int(round((9 * Stopn) / 5 + 32))
+
+    OutSkala = "Farenhait"
+
+elif CatchSkala.upper() == "F":
+
+    result = int(round((Stopn) / 5 + 32))
+
+    OutSkala = "Celcjusz"
+
+else:
+    
+    print("Zły input, (Przykłąd: 21C, 98F)")
+    
+    quit()
+
+print("Temperatura w", OutSkala, "wynosi", result, "stopnii.")
