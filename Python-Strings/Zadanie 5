@@ -1,0 +1,8 @@
+def CharMixIn(a, b):
+    OutA = b[:2] + a[2:]
+
+    OutB = a[:2] + b[2:]
+
+    return OutA + ' ' + OutB
+
+print(CharMixIn('send', 'recive'))
