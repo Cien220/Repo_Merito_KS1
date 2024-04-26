@@ -1,0 +1,11 @@
+def SumList(lista1):
+
+    SumaListy = 0
+
+    for x in lista1:
+        
+        SumaListy += x
+
+    return SumaListy
+
+print(SumList([1, 5, 7, 12]))
