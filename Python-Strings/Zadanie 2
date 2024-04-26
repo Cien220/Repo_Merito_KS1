@@ -1,0 +1,20 @@
+def CharFreq(str1):
+
+    libr = {}
+
+    for n in str1:
+
+        keys = libr.keys()
+
+        if n in keys:
+
+            libr[n] += 1
+
+        else:
+
+            libr[n] = 1
+
+    return libr
+
+print(CharFreq('WhyGithubWhy'))
+
