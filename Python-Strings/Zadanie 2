@@ -17,4 +17,3 @@ def CharFreq(str1):
     return libr
 
 print(CharFreq('WhyGithubWhy'))
-
