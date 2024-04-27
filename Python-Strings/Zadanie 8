@@ -1,0 +1,14 @@
+def BigWord(wrdList):
+
+    wrdLen = []
+    for n in wrdLen:
+        wrdLen.append((len(n), n))
+    wrdLen.sort()
+    return wrdLen[-1][0], wrdLen[-1][1]
+
+result = BigWord(["Rcg", "Restricted", "Commodities"])
+
+print("\nDŁUGIE słowo: ", result[1])
+print("Długość najdłuższego słowa: ", result[0])
+
+"""8. Write a Python function that takes a list of words and return the longest word and the length of the longest one."""
