@@ -1,0 +1,9 @@
+dic = {0: 9, 1: 12}
+
+print("Orginalny Słownik: ", dic)
+
+dic.update({2: 14})
+
+print("Słownik po dodaniu klucza:", updated_dict)
+
+"""2. Write a Python script to add a key to a dictionary."""
