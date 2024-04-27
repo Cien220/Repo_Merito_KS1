@@ -7,3 +7,5 @@ while CelInt != ZnajInt:
     ZnajInt = int(input('Wybierz numer między 1 a 3 aż nie trafisz : '))
 
 print('Nice try.')
+
+"""3. Write a Python program to guess a number between 1 and 3."""

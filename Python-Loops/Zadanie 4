@@ -15,3 +15,5 @@ for i in range(linie, 0, -1):
         print('* ', end="")
 
     print('')
+
+    """4. Write a Python program to construct the following pattern, using a nested for loop."""

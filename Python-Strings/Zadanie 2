@@ -17,3 +17,5 @@ def CharFreq(str1):
     return libr
 
 print(CharFreq('WhyGithubWhy'))
+
+"""2. Write a Python program to count the number of characters (character frequency) in a string."""
