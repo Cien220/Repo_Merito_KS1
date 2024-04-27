@@ -11,3 +11,5 @@ print('Posortowane rosnąco wedłub wielkości : ',SortDic)
 SortDic = dict( sorted(Dic.items(), key=operator.itemgetter(1), reverse=True))
 
 print('Posortowane malejąco wedłub wielkości : ',SortDic)
+
+"""1. Write a Python script to sort (ascending and descending) a dictionary by value."""
