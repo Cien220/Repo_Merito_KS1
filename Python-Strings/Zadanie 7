@@ -1,0 +1,24 @@
+def NotBad(str1):
+
+    Fndnot = str1.find('not')
+
+    Fndpoor = str1.find('poor')
+
+    if Fndpoor > Fndnot and Fndnot > 0 and Fndpoor > 0:
+
+        str1 = str1.replace(str1[Fndnot:(Fndpoor+4)], 'bad')
+
+        return str1
+    
+    else:
+
+        return str1
+    
+print(NotBad('The lyrics is not that poor!'))
+print(NotBad('The lyrics is poor!'))
+
+"""7. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+Sample String : 'The lyrics is not that poor!'
+'The lyrics is poor!'
+Expected Result : 'The lyrics is good!'
+'The lyrics is poor!'"""
