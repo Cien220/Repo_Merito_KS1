@@ -1,0 +1,8 @@
+def ChngStr(str1):
+
+    return str1[-1:] + str1[1:-1] + str1[:1]
+
+print(ChngStr('abcdefghijklmnouprst'))
+print(ChngStr('123456789'))
+
+"""10. Write a Python program to change a given string to a newly string where the first and last chars have been exchanged."""

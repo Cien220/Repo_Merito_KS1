@@ -1,0 +1,13 @@
+def RmvChar(str1, n):
+
+    bottom = str1[:n]
+
+    top = str1[n+1:]
+
+    return bottom + top
+
+print(RmvChar('Python', 0))
+print(RmvChar('Python', 3))
+print(RmvChar('Python', 5))
+
+"""9. Write a Python program to remove the nth index character from a nonempty string."""
