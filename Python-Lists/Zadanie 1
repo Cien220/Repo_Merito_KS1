@@ -9,3 +9,5 @@ def SumList(lista1):
     return SumaListy
 
 print(SumList([1, 5, 7, 12]))
+
+"""1. Write a Python program to sum all the items in a list."""

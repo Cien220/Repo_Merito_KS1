@@ -9,3 +9,5 @@ def MultList(items):
     return total
 
 print(MultList([1, 3, 6, 8, 11]))
+
+"""2. Write a Python program to multiply all the items in a list."""
