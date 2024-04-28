@@ -1,0 +1,7 @@
+UsrInput = input("Give me a word. ")
+
+print("Youre word = ", UsrInput.lower())
+
+print("Youre word but cooler = ", UsrInput.upper()) 
+
+"""13. Write a Python script that takes input from the user and displays that input back in upper and lower cases."""

@@ -1,0 +1,10 @@
+def HrtWrd(str):
+
+    lastCh = str[-2:]
+    
+    return lastCh * 4
+
+print(HrtWrd('Megalodon'))
+print(HrtWrd('Noodles'))
+
+"""17. Write a Python function to get a string made of 4 copies of the last two characters of a specified string (length must be at least 2)."""

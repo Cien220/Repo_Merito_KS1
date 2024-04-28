@@ -1,0 +1,21 @@
+def WrdCou(str1):
+
+    counts = dict()
+    
+    words = str1.split()
+
+    for word in words:
+
+        if word in counts:
+
+            counts[word] += 1
+
+        else:
+
+            counts[word] = 1
+
+    return counts
+
+print(WrdCou('we live in an industrial society'))
+
+"""12. Write a Python program to count the occurrences of each word in a given sentence."""

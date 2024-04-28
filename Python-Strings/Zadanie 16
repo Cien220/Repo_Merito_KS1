@@ -1,0 +1,9 @@
+def CramStr(str, word):
+
+    return str[:2] + word + str[2:]
+
+print(CramStr('[[]]', 'Square'))
+print(CramStr('{{}}', 'Sth'))
+print(CramStr('<<>>', 'Sideway rectangle'))
+
+"""16. Write a Python function to insert a string in the middle of a string."""

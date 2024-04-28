@@ -1,0 +1,9 @@
+def SetTag(tag, word):
+
+    return "<%s>%s</%s>" % (tag, word, tag)
+
+print(SetTag('p', 'Pomagranate'))
+
+print(SetTag('h1', 'HTML live'))
+
+"""15. Write a Python function to create an HTML string with tags around the word(s)."""

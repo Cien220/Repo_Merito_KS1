@@ -1,0 +1,7 @@
+str1 = input("Podaj wyrazy podzielone przecinkami: ")
+
+str1 = [word for word in str1.split(",")]
+
+print(",".join(sorted(list(set(str1)))))
+
+""""14. Write a Python program that accepts a comma-separated sequence of words as input and prints the distinct words in sorted form (alphanumerically)."""
