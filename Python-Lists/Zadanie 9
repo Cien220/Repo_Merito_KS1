@@ -1,0 +1,9 @@
+listOrg = [10, 22, 44, 23, 4]
+
+listNew = list(listOrg)
+
+print(listOrg)
+
+print(listNew)
+
+"""9. Write a Python program to clone or copy a list."""
