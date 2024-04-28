@@ -1,0 +1,20 @@
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+CntOdd = 0
+
+CntEvn = 0
+
+for x in numbers:
+
+    if not x % 2:
+
+        CntEvn += 1
+
+    else:
+
+        CntOdd += 1
+
+print("Ilość równych liczb:", CntEvn)
+print("Ilość nie równych liczb:", CntOdd) 
+
+"""6. Write a Python program to count the number of even and odd numbers in a series of numbers"""

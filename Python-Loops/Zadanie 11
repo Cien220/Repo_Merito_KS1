@@ -1,0 +1,15 @@
+wiersz = int(input("Wpisz ilość wierszy: "))
+
+kolumna = int(input("Wpisz ilość kolumn: "))
+
+arkusz = [[0 for col in range(kolumna)] for row in range(wiersz)]
+
+for row in range(wiersz):
+
+    for col in range(kolumna):
+
+        arkusz[row][col] = row * col
+
+print(arkusz) 
+
+"""11. Write a Python program that takes two digits m (row) and n (column) as input and generates a two-dimensional array. The element value in the i-th row and j-th column of the array should be i*j."""

@@ -1,0 +1,23 @@
+for NuchUchh in range(51):
+
+    if NuchUchh % 3 == 0 and NuchUchh % 5 == 0:
+
+        print("NuchUchh")
+
+        continue
+
+    elif NuchUchh % 3 == 0:
+
+        print("Nuch")
+
+        continue
+
+    elif NuchUchh % 5 == 0:
+
+        print("Uchh")
+
+        continue
+
+    print(NuchUchh) 
+	
+"""10. Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Nuch" instead of the number and for multiples of five print "Uchh". For numbers that are multiples of three and five, print "NuchUchh"."""
