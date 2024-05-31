@@ -1,0 +1,13 @@
+def wPrzedziale(n):
+
+    if n in range(3, 9):
+
+        print("%s jest w przedziale" % str(n))
+
+    else:
+
+        print("Liczba jest poza przedizałem.")
+
+wPrzedziale(5)
+
+"""Write a Python function to check whether a number falls within a given range."""
