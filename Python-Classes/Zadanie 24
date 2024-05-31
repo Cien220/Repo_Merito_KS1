@@ -1,0 +1,7 @@
+import itertools
+
+x = itertools.cycle('ABCD')
+
+print(type(x).__name__)
+
+"""Write a Python class to get the class name of an instance in Python."""
