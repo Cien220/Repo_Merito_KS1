@@ -1,0 +1,15 @@
+def NajZDwa(x, y):
+
+    if x > y:
+
+        return x
+    
+    return y
+
+def NajZTrzy(x, y, z):
+
+    return NajZTrzy(x, NajZTrzy(y, z))
+
+print(NajZTrzy(3, 6, -5)) 
+
+"""Write a Python function to find the maximum of three numbers."""

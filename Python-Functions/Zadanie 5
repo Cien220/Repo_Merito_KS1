@@ -1,0 +1,15 @@
+def ulamek(n):
+
+    if n == 0:
+
+        return 1
+    
+    else:
+
+        return n * ulamek(n - 1)
+
+n = int(input("Wpisz liczbę, żeby dostsać ułamek: "))
+
+print(ulamek(n))
+
+"""Write a Python function to calculate the factorial of a number. The function accepts the number as an argument."""
