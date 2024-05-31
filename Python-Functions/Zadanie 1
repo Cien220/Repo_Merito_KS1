@@ -8,7 +8,7 @@ def NajZDwa(x, y):
 
 def NajZTrzy(x, y, z):
 
-    return NajZTrzy(x, NajZTrzy(y, z))
+    return NajZDwa(x, NajZDwa(y, z))
 
 print(NajZTrzy(3, 6, -5)) 
 
