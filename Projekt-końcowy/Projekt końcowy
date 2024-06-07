@@ -1,32 +1,34 @@
 import random
 import math
 
-lower = int(input("Podaj dolną granicę:- "))
+while True:
 
-upper = int(input("Podaj górną granicę:- "))
+    lower = int(input("Podaj dolną granicę:- "))
 
-x = random.randint(lower, upper)
+    upper = int(input("Podaj górną granicę:- "))
 
-print("\n\tIlość prób na zgadnięcie liczby: ", 
-	round(math.log(upper - lower + 1, 2)), "\n")
+    x = random.randint(lower, upper)
 
-count = 0
+    print("\n\tIlość prób na zgadnięcie liczby: ", 
+    	round(math.log(upper - lower + 1, 2)), "\n")
 
-while count < math.log(upper - lower + 1, 2):
-	count += 1
+    count = 0
 
-	guess = int(input("Zgadnij cyfrę:- "))
+    while count < math.log(upper - lower + 1, 2):
+    	count += 1
 
-	if x == guess:
-		print("Gratulacje, udało ci się po ",
-			count, " próbach")
-		break
+	    guess = int(input("Zgadnij cyfrę:- "))
+
+	    if x == guess:
+	    	print("Gratulacje, udało ci się po ",
+	    		count, " próbach")
+	    	break
 	
-	elif x > guess:
-		print("Zgaduj wyżej!")
-	elif x < guess:
-		print("Zgaduj niżej!")
+	    elif x > guess:
+	    	print("Zgaduj wyżej!")
+	    elif x < guess:
+	    	print("Zgaduj niżej!")
 
-if count >= math.log(upper - lower + 1, 2):
-	print("\nWylosowaną cyfrą jest %d" % x)
-	print("\tPowodzenia następnym razem!")
+    if count >= math.log(upper - lower + 1, 2):
+	    print("\nWylosowaną cyfrą jest %d" % x)
+	    print("\tPowodzenia następnym razem!")
