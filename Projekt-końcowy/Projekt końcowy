@@ -7,9 +7,8 @@ upper = int(input("Podaj górną granicę:- "))
 
 x = random.randint(lower, upper)
 
-print("\n\tPozostało ", 
-	round(math.log(upper - lower + 1, 2)),
-	" szans na zgadnięcie cyfry!\n")
+print("\n\tIlość prób na zgadnięcie liczby: ", 
+	round(math.log(upper - lower + 1, 2)), "\n")
 
 count = 0
 
@@ -19,14 +18,14 @@ while count < math.log(upper - lower + 1, 2):
 	guess = int(input("Zgadnij cyfrę:- "))
 
 	if x == guess:
-		print("Gratulacje, udało ci się ",
-			count, " prób wykorzystanych")
+		print("Gratulacje, udało ci się po ",
+			count, " próbach")
 		break
 	
 	elif x > guess:
-		print("Zgadujesz za mało!")
+		print("Zgaduj wyżej!")
 	elif x < guess:
-		print("Zgadujesz za dużo!")
+		print("Zgaduj niżej!")
 
 if count >= math.log(upper - lower + 1, 2):
 	print("\nWylosowaną cyfrą jest %d" % x)
