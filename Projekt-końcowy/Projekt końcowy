@@ -1,34 +1,48 @@
 import random
 import math
 
-while True:
+running = True      #pętla do kontunuowania gry
 
-    lower = int(input("Podaj dolną granicę:- "))
+while running:
 
-    upper = int(input("Podaj górną granicę:- "))
+    lower = int(input("Podaj dolną granicę: "))
+    upper = int(input("Podaj górną granicę: "))
+	
+    if lower >= upper:          #funkcja sprawdzająca czy górna granica nie jest mniejsza od dolnej
+        print("Dolna granica musi być mniejsza niż górna granica. Spróbuj ponownie.")
+        continue
 
     x = random.randint(lower, upper)
 
-    print("\n\tIlość prób na zgadnięcie liczby: ", 
-    	round(math.log(upper - lower + 1, 2)), "\n")
-
+    max_tries = round(math.log(upper - lower + 1, 2))       #liczba prób przypisana do zmiennej
+    print("\n\tIlość prób na zgadnięcie liczby: ", max_tries, "\n")
+	
     count = 0
 
-    while count < math.log(upper - lower + 1, 2):
-    	count += 1
+    while count < max_tries:
+        count += 1
 
-	    guess = int(input("Zgadnij cyfrę:- "))
+        guess = int(input("Zgadnij cyfrę: "))
 
-	    if x == guess:
-	    	print("Gratulacje, udało ci się po ",
-	    		count, " próbach")
-	    	break
+        if x == guess:
+            print("Gratulacje, udało ci się po ", count, " próbach")
+            break
 	
-	    elif x > guess:
-	    	print("Zgaduj wyżej!")
-	    elif x < guess:
-	    	print("Zgaduj niżej!")
+        elif x > guess:
+            print("Zgaduj wyżej!")
+            print("Ilość pozostałych szans: ", max_tries - count)       #odliczanie pozostałych prób
+        elif x < guess:
+            print("Zgaduj niżej!")
+            print("Ilość pozostałych szans: ", max_tries - count)
 
-    if count >= math.log(upper - lower + 1, 2):
-	    print("\nWylosowaną cyfrą jest %d" % x)
-	    print("\tPowodzenia następnym razem!")
+    if count > max_tries:
+        print("\nWylosowaną cyfrą jest %d" % x)
+        print("Powodzenia następnym razem!")
+
+    still_playing = input("\nCzy chcesz spróbować jeszcze raz? (tak/nie): \n").strip().lower()
+
+    """Dodana funkcja, która pozwala zagrać jeszcze raz"""
+    
+    if still_playing != "tak":  #jeśli na pytanie zostanie wpisane cokolwiek innego niż tak, gra się kończy
+        print("Koniec gry.")
+        running = False
