@@ -1,0 +1,33 @@
+import random
+import math
+
+lower = int(input("Podaj dolną granicę:- "))
+
+upper = int(input("Podaj górną granicę:- "))
+
+x = random.randint(lower, upper)
+
+print("\n\tPozostało ", 
+	round(math.log(upper - lower + 1, 2)),
+	" szans na zgadnięcie cyfry!\n")
+
+count = 0
+
+while count < math.log(upper - lower + 1, 2):
+	count += 1
+
+	guess = int(input("Zgadnij cyfrę:- "))
+
+	if x == guess:
+		print("Gratulacje, udało ci się ",
+			count, " prób wykorzystanych")
+		break
+	
+	elif x > guess:
+		print("Zgadujesz za mało!")
+	elif x < guess:
+		print("Zgadujesz za dużo!")
+
+if count >= math.log(upper - lower + 1, 2):
+	print("\nWylosowaną cyfrą jest %d" % x)
+	print("\tPowodzenia następnym razem!")
