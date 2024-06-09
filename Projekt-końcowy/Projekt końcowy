@@ -35,7 +35,7 @@ while running:
             print("Zgaduj niżej!")
             print("Ilość pozostałych szans: ", max_tries - count)
 
-    if count > max_tries:
+    if count >= max_tries:
         print("\nWylosowaną cyfrą jest %d" % x)
         print("Powodzenia następnym razem!")
 
