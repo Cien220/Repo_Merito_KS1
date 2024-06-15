@@ -1,0 +1,20 @@
+import unittest
+
+def is_palindrome(string):
+    return string == string[::-1]
+
+class TestPalindrome(unittest.TestCase):
+    def test_palindrome_string(self):
+        palindrome = "madam"
+        print("Test na odwrócalność:", palindrome)
+        self.assertTrue(is_palindrome(palindrome), "Tekst powinien być odwracalny.")
+
+    def test_non_palindrome_string(self):
+        non_palindrome = "hello"
+        print("Test na nieodwracalność:", non_palindrome)
+        self.assertFalse(is_palindrome(non_palindrome), "Tekst nie powinien być odwracalny.")
+
+if __name__ == '__main__':
+    unittest.main()
+
+"""4. Write a Python unit test program to check if a string is a palindrome."""

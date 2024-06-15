@@ -1,0 +1,28 @@
+import unittest
+
+def is_prime(number):
+    if number < 2:
+        return False
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+class PrimeNumberTestCase(unittest.TestCase):
+
+    def test_prime_numbers(self):
+        prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+        print("Liczby pierwsze:", prime_numbers)
+        for number in prime_numbers:
+            self.assertTrue(is_prime(number), f"{number} nie są rozpoznawane jako liczby pierwsze")
+
+    def test_non_prime_numbers(self):
+        non_prime_numbers = [4, 6, 8, 10, 12, 14, 16, 18, 20]
+        print("Liczby nie pierwsze:", non_prime_numbers)
+        for number in non_prime_numbers:
+            self.assertFalse(is_prime(number), f"{number} są błędnie rozpoznane jako liczby pierwsze")
+
+if __name__ == '__main__':
+    unittest.main()
+
+"""1. Write a Python unit test program to check if a given number is prime or not."""

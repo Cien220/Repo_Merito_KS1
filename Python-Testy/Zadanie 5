@@ -1,0 +1,29 @@
+import os
+import unittest
+import tempfile
+
+def file_exists(directory, filename):
+    file_path = os.path.join(directory, filename)
+    return os.path.exists(file_path)
+
+class TestFileExists(unittest.TestCase):
+    def setUp(self):
+        self.test_dir = tempfile.TemporaryDirectory()
+        self.existing_file = 'test1.txt'
+        with open(os.path.join(self.test_dir.name, self.existing_file), 'w') as f:
+            f.write("To jest plik testowy.")
+
+    def tearDown(self):
+        self.test_dir.cleanup()
+
+    def test_existing_file(self):
+        self.assertTrue(file_exists(self.test_dir.name, self.existing_file), "Plik nie istnieje w danym katalogu.")
+
+    def test_nonexistent_file(self):
+        nonexistent_file = 'test2.txt'
+        self.assertFalse(file_exists(self.test_dir.name, nonexistent_file), "Plik istnieje w danym katalogu.")
+
+if __name__ == '__main__':
+    unittest.main()
+
+"""5. Write a Python unit test program to check if a file exists in a specified directory."""
