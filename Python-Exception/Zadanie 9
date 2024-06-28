@@ -1,0 +1,14 @@
+def open_file(filename):
+    encoding = input("Wstaw kodowanie (ASCII, UTF-16, UTF-8) dla pliku: ")
+    try:
+        with open(filename, 'r', encoding=encoding) as file:
+            contents = file.read()
+            print("Zawartość plikus:")
+            print(contents)
+    except UnicodeDecodeError:
+        print("Error: Błąd w kodowaniu pliku.")
+
+file_name = input("Wstaw nazwępliku: ")
+open_file(file_name) 
+
+"""9. Write a Python program that opens a file and handles a UnicodeDecodeError exception if there is an encoding issue."""

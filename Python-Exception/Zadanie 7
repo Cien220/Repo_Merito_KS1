@@ -1,0 +1,7 @@
+try:
+    n = int(input("Wstaw liczbę: "))
+    print("Wstawiłeś:", n)
+except KeyboardInterrupt:
+    print("Input anulowany przez użytkownika.")
+
+"""7. Write a Python program that prompts the user to input a number and handles a KeyboardInterrupt exception if the user cancels the input."""

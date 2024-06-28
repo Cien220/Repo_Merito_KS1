@@ -1,0 +1,13 @@
+def podziel(x, y):
+    try:
+        result = x / y
+        print("Wynik:", result)
+    except ZeroDivisionError:
+        print("Nie dzielimy przez zero.")
+
+numerator = 100
+denominator = 0
+
+podziel(numerator, denominator)
+
+"""1. Write a Python program to handle a ZeroDivisionError exception when dividing a number by zero."""

@@ -1,0 +1,14 @@
+def open_file(filename):
+    try:
+        file = open(filename, 'r')
+        contents = file.read()
+        print("Zawartość pliku:")
+        print(contents)
+        file.close()
+    except FileNotFoundError:
+        print("Error: Plik nie znaleziony.")
+
+file_name = input("Wprowadź nazwę pliku: ")
+open_file(file_name) 
+
+"""3. Write a Python program that opens a file and handles a FileNotFoundError exception if the file does not exist."""
