@@ -1,0 +1,17 @@
+import asyncio
+import time
+
+async def time_consuming_task(duration):
+    print(f'Rozpoczynam długie zadanie zajmujące {duration} sekund...')
+    await asyncio.sleep(duration)
+    return f'Długie zadanie zakończone w {duration} sekund'
+async def main():
+    timeout =3
+    try:
+        result = await asyncio.wait_for(time_consuming_task(8), timeout)
+        print(result)
+    except asyncio.TimeoutError:
+        print(f'Error: Zadanie przerwane po {timeout} sekundach')
+asyncio.run(main())
+
+"""7. Write a Python program that implements a timeout for an asynchronous operation using asyncio.wait_for()."""

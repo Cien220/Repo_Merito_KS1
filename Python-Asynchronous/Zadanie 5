@@ -1,0 +1,26 @@
+import asyncio
+import time
+
+async def task1():
+    print("Zadanie-1 rozpoczęte")
+    await asyncio.sleep(4)
+    print("Zadanie-1 zakończone")
+async def task2():
+    print("Zadanie-2 rozpoczęte")
+    await asyncio.sleep(1)
+    print("Zadanie-2 zakończone")
+async def task3():
+    print("Zadanie-3 rozpoczęte\n")
+    await asyncio.sleep(2)
+    print("Zadanie-3 zakończone")
+
+async def main():
+    start_time = time.time()    
+    await asyncio.gather(task1(), task2(), task3())    
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print("\nWszystkie zadania zakończone w {:.2f} sekund".format(elapsed_time))
+
+asyncio.run(main())
+
+"""5. Write a Python program that runs multiple asynchronous tasks concurrently using asyncio.gather() and measures the time taken."""
